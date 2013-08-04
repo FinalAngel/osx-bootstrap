@@ -17,16 +17,16 @@ Install Bootstrap
 -----------------
 
 #. | Open a terminal and run:
-   | ``bash <(curl -s raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh)``
+   | ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh)``
 #. | Run addtional bootstraps like:
-   | ``bash <(curl -s raw.github.com/divio/osx-bootstrap/master/extras/osx-software.sh)``
-   | ``bash <(curl -s raw.github.com/divio/osx-bootstrap/master/extras/osx-projects.sh)``
+   | ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/extras/osx-software.sh)``
+   | ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/extras/osx-projects.sh)``
 #. | Add your RSA key (``cat ~/.ssh/id_rsa.pub``) into your github.com account under ``SSH Keys``
 
 You will need to enter your **sudo password** and **github information** during the installation process.
 
 | The default hostname will be set to **osx-`whoami`** you can overwrite this by adding the desired hostname using:
-| ``bash <(curl -s raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh) my-computer``
+| ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh) my-computer``
 
 
 About Bootstrap
@@ -56,4 +56,4 @@ Using Bootstrap
 ---------------
 
 * run ``~/.osx-bootstrap`` to autoupdate your system from time to time
-* run ``bash <(curl -s raw.github.com/divio/osx-bootstrap/master/osx-bootstrap-nuke.sh)`` to uninstall osx-bootstrap (not working yet)
+* run ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap-nuke.sh)`` to uninstall osx-bootstrap (not working yet)
