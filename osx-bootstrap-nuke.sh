@@ -16,7 +16,7 @@ echo '##### Uninstall OSX Bootstrap...'
 rm -rf ~/.osx-bootstrap
 
 echo '##### Uninstall oh-my-zsh...'
-uninstall_oh_my_zsh
+~/oh-my-zsh/tools/uninstall.sh
 
 echo '##### Uninstall Settings...'
 rm -rf ~/.profile
@@ -29,6 +29,9 @@ brew update
 sudo rm -rf /etc/resolver
 sudo rm -rf /usr/local/etc/dnsmasq.conf
 bash <(curl -s https://gist.github.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh)
+rm -rf /usr/local/Cellar
+rm -rf /usr/local/.git
+rm -rf /Library/Caches/Homebrew
 
 echo '##### Note: ~/Sites will mot be removed'
 echo '##### Note: OSX Defaults will not be reset'
