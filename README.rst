@@ -2,7 +2,7 @@
 OSX Bootstrap
 =============
 
-This is a bash script designed for divio macs running **OSX Mountain Lion**.
+This is a bash script automating configuration and installation of **OSX Mountain Lion** workstations.
 
 
 Requirements
@@ -16,15 +16,21 @@ Requirements
 Install Bootstrap
 -----------------
 
-#. Open a terminal and run ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh)``
-#. Add your RSA key (``cat ~/.ssh/id_rsa.pub``) into your Github account under ``SSH Keys``
+#. Open a terminal and run: 
+   ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh)``
+#. Add your RSA key (``cat ~/.ssh/id_rsa.pub``) into your github.com account under ``SSH Keys``
 #. Run addtional bootstraps like ``osx-software.sh`` or ``osx-projects.sh``
 
 You will need to enter your **sudo password** and **github information** during the installation process.
 
-The default hostname will be set to **osx-`whoami`** you can overwrite this by adding the desired hostname using: ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh) divio-computer``
+The default hostname will be set to **osx-`whoami`** you can overwrite this by adding the desired hostname using:
+``bash <(curl -s ...osx-bootstrap.sh) divio-computer``
 
-The following configuration will be set:
+
+About Bootstrap
+---------------
+
+The following configurations will be automated:
 
 * Disc Encryption
 * Softwareupdates
@@ -32,7 +38,7 @@ The following configuration will be set:
 * Git & Github
 * OSX Defaults
 
-The following packages will be installed:
+The following software will be installed:
 
 * Homebrew
 * Formulas: git, hub, bash-completion, ssh-copy-id, wget, dnsmasq, nginx, cowsay, 
@@ -46,5 +52,5 @@ Additionally ``~/.profile`` and ``~/.zshrc`` will be setup for you.
 Using Bootstrap
 ---------------
 
-#. run ``~/.osx-bootstrap`` to autoupdate your system from time to time
-#. run ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap-nuke.sh)`` to uninstall osx-bootstrap (not working yet)
+* run ``~/.osx-bootstrap`` to autoupdate your system from time to time
+* run ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap-nuke.sh)`` to uninstall osx-bootstrap (not working yet)
