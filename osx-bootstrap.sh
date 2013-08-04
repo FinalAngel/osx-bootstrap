@@ -4,7 +4,7 @@
 clear
 
 # autoupdate bootstrap file
-wget https://gist.github.com/FinalAngel/63779c02cf534df0d9b7/raw/ -O ~/.osx-bootstrap-tmp -q
+wget https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh -O ~/.osx-bootstrap-tmp -q
 
 # start bootstrap
 echo "OSX Bootstrap 1.0.0"
@@ -41,11 +41,11 @@ fi
 
 # update osx version
 echo '##### Running OSX Software Updates...'
-#sudo softwareupdate -i -a
+sudo softwareupdate -i -a
 
 # update gem versions
 echo '##### Running Ruby Gem Updates...'
-#sudo gem update --system
+sudo gem update --system
 
 # install homebrew
 `which -s brew`
@@ -56,8 +56,8 @@ if [[ $? != 0 ]]; then
     brew doctor
 else
     echo '##### Running Homebrew Updates...'
-    #brew update
-    #brew doctor
+    brew update
+    brew doctor
 fi
 
 # install helpfull formulas
