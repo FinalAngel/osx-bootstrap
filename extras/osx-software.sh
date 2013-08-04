@@ -65,7 +65,7 @@ do
     if [[ $ext = 'dmg' ]]; then
         echo '##### Installing DMG '$file
         hdiutil mount -plist -nobrowse -quiet -mountpoint $mountpoint $downloads/$file
-        cp -fR $mountpoint/*.app $applications/
+        cp -rf $mountpoint/*.app $applications/
         hdiutil unmount $mountpoint/ -quiet
     fi
 
@@ -74,7 +74,7 @@ do
         echo '##### Installing DMG Eula '$file
         hdiutil convert -quiet $downloads/$file -format UDTO -o bar
         hdiutil mount -plist -nobrowse -quiet -mountpoint $mountpoint bar.cdr
-        cp -fR $mountpoint/*.app $applications/
+        cp -rf $mountpoint/*.app $applications/
         hdiutil unmount $mountpoint/ -quiet
     fi
 
@@ -82,9 +82,9 @@ do
     if [[ $ext = 'zip' ]]; then
         echo '##### Installing ZIP '$file
         unzip -q $downloads/$file -d $downloads
-        cp -fR $downloads/*.app $applications/
+        cp -rf $downloads/*.app $applications/
     fi
 
     # cleanup
-    rm -R $downloads
+    rm -rf $downloads
 done

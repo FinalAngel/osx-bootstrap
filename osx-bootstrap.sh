@@ -50,7 +50,7 @@ sudo gem update --system
 # install homebrew
 `which -s brew`
 if [[ $? != 0 ]]; then
-    echo '##### Installing Homebrew...';
+    echo '##### Installing Homebrew...'
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
     brew update
     brew doctor
@@ -202,7 +202,7 @@ if [[ $? != 0 ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
     # setup zsh
-    rm ~/.zshrc
+    rm -rf ~/.zshrc
 
     echo 'ZSH=$HOME/.oh-my-zsh' >> ~/.zshrc
     echo 'ZSH_THEME="robbyrussell"' >> ~/.zshrc
@@ -363,9 +363,10 @@ if [[ ! -f ~/.ssh/id_rsa ]]; then
         git config --global user.email $github_email
         git config --global github.user g3d
         git config --global github.token your_token_here
-        git config --global core.editor "subl -w"
         git config --global color.ui true
         git config --global push.default matching
+        # sublime support
+        # git config --global core.editor "subl -w"
 
         # set rsa key
         curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain

@@ -18,8 +18,10 @@ Install Bootstrap
 
 #. | Open a terminal and run:
    | ``bash <(curl -s raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh)``
+#. | Run addtional bootstraps like:
+   | ``bash <(curl -s raw.github.com/divio/osx-bootstrap/master/extras/osx-software.sh)``
+   | ``bash <(curl -s raw.github.com/divio/osx-bootstrap/master/extras/osx-projects.sh)``
 #. | Add your RSA key (``cat ~/.ssh/id_rsa.pub``) into your github.com account under ``SSH Keys``
-#. | Run addtional bootstraps like ``osx-software.sh`` or ``osx-projects.sh``
 
 You will need to enter your **sudo password** and **github information** during the installation process.
 
