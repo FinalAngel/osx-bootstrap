@@ -196,8 +196,7 @@ if [[ ! $postgres ]]; then
 fi
 
 # install oh-my-zsh
-`which -s zsh`
-if [[ $? != 0 ]]; then
+if [[ ! -f ~/.zshrc ]]; then
     echo '##### Installing oh-my-zsh...'
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
