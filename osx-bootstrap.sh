@@ -340,6 +340,8 @@ if [[ ! -f ~/.osx-bootstrap ]]; then
     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool false
     # Enable AirDrop over Ethernet and on unsupported Macs running Lion
     defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+    # show remaining battery time
+    defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
     #  killall
     for app in Finder Dock Mail Safari iTunes
