@@ -16,7 +16,7 @@ downloads=~/Downloads/TMP
 mountpoint=/Volumes/TMP
 
 export apps='
-    http://download.skype.com/macosx/Skype_6.7.0.373.dmg
+    http://www.skype.com/go/getskype-macosx.dmg
     http://mirror.switch.ch/ftp/mirror/videolan/vlc/2.0.8/macosx/vlc-2.0.8-intel64.dmg
     http://dl.google.com/drive/installgoogledrive.dmg
     https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%202.2.8.dmg
