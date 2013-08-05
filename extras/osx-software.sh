@@ -17,8 +17,34 @@ mountpoint=/Volumes/TMP
 
 export apps='
     http://www.skype.com/go/getskype-macosx.dmg
+    http://mirror.switch.ch/ftp/mirror/videolan/vlc/2.0.8/macosx/vlc-2.0.8-intel64.dmg
+    http://dl.google.com/drive/installgoogledrive.dmg
+    https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%202.2.8.dmg
+    https://ccmdls.adobe.com/AdobeProducts/PHSP/14/osx10/AAMmetadataLS20/CreativeCloudInstaller.dmg
+    https://dl.google.com/chrome/mac/stable/GoogleChrome.dmg
+    http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/22.0/mac/en-US/Firefox%2022.0.dmg
+    http://downloads.atlassian.com/software/sourcetree/SourceTree_1.6.2.2.dmg
+    http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
+    http://download.jetbrains.com/python/pycharm-2.7.3.dmg
+    http://download.jetbrains.com/idea/ideaIU-12.1.4.dmg
     http://ftp.postgresql.org/pub/pgadmin3/release/v1.16.1/osx/pgadmin3-1.16.1.dmg#eula
-'
+    http://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-gpl-5.2.47-osx-i686.dmg
+    http://awesome.vanamco.com/downloads/ghostlab/latest/Ghostlab.dmg
+    http://download.transmissionbt.com/files/Transmission-2.81.dmg
+    http://www.freemacsoft.net/downloads/AppCleaner_2.2.zip
+    https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.21.zip
+    http://www.irradiatedsoftware.com/download/SizeUp.zip
+    http://www.codeux.com/textual/private/downloads/builds/trial-versions/Textual-Trial-g441bee9.zip
+    http://download.spotify.com/SpotifyInstaller.zip
+    http://incident57.com/codekit/files/codekit-8317.zip
+    http://www.panic.com/transmit/d/Transmit%204.4.1.zip
+    http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.0.1-114.zip
+    http://culturedcode.cachefly.net/things/Things_2.2.1.zip
+    http://cdn1.evernote.com/skitch/mac/release/Skitch-2.6.2.zip
+    http://www.getharvest.com/harvest/mac/Harvest.zip
+    http://downloads.hipchat.com.s3.amazonaws.com/osx/HipChat-2.0.zip
+    http://download.spotify.com/SpotifyInstaller.zip
+    http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip'
 for app in $apps
 do
     # TODO we should write each app link to a file and read if its already available
