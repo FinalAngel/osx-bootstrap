@@ -4,7 +4,7 @@
 clear
 
 # autoupdate bootstrap file
-wget https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh -O ~/.osx-bootstrap-tmp -q
+curl -o ~/.osx-bootstrap-tmp https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh
 
 # start bootstrap
 echo "OSX Bootstrap 1.0.0"
