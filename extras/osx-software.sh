@@ -4,8 +4,8 @@
 clear
 
 # start bootstrap
-echo "OSX Software 1.0.0"
-echo "------------------"
+echo "OSX Bootstrap Software"
+echo "----------------------"
 echo ""
 
 # installing dmg files
@@ -15,6 +15,7 @@ applications=/Applications/Downloaded
 downloads=~/Downloads/TMP
 mountpoint=/Volumes/TMP
 
+# http://ftp.postgresql.org/pub/pgadmin3/release/v1.16.1/osx/pgadmin3-1.16.1.dmg#eula
 export apps='
     http://www.skype.com/go/getskype-macosx.dmg
     http://mirror.switch.ch/ftp/mirror/videolan/vlc/2.0.8/macosx/vlc-2.0.8-intel64.dmg
@@ -26,9 +27,7 @@ export apps='
     http://downloads.atlassian.com/software/sourcetree/SourceTree_1.6.2.2.dmg
     http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
     http://download.jetbrains.com/python/pycharm-2.7.3.dmg
-    http://download.jetbrains.com/idea/ideaIU-12.1.4.dmg
-    http://ftp.postgresql.org/pub/pgadmin3/release/v1.16.1/osx/pgadmin3-1.16.1.dmg#eula
-    http://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-gpl-5.2.47-osx-i686.dmg
+    https://www.valentina-db.com/en/applications-download/valentina-studio?section=files&task=download&cid=13_56d61c59a23f6005c1d7fefdb89f3796
     http://awesome.vanamco.com/downloads/ghostlab/latest/Ghostlab.dmg
     http://download.transmissionbt.com/files/Transmission-2.81.dmg
     http://www.freemacsoft.net/downloads/AppCleaner_2.2.zip
