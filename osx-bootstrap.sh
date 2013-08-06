@@ -198,11 +198,6 @@ if [[ ! $postgres ]]; then
     createdb template_postgis
     createlang plpgsql template_postgis
 fi
-    sed '
-    /#gzip  on;/ c\
-    #gzip  on;
-    include sites-enabled/*;
-    ' /usr/local/etc/nginx/nginx.conf
 
 # install php
 php=`brew list | grep php`
