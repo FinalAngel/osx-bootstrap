@@ -70,6 +70,10 @@ function project() {
 		make update
 		# make run
 	fi
+
+	# setup database
+	# fab dev pg.download
+	# bin/django dbshell < /path/
 }
 
 if [[ ! $1 = 'all' ]]; then
