@@ -7,7 +7,8 @@ clear
 curl -o ~/.osx-bootstrap-tmp https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh
 
 # start bootstrap
-echo "OSX Bootstrap 1.0.0"
+echo ""
+echo "OSX Bootstrap 1.0.1"
 echo "-------------------"
 echo ""
 
@@ -103,6 +104,8 @@ do
             launchctl load ~/Library/LaunchAgents/homebrew.mxcl.dnsmasq.plist
 
             # setup resolver
+            [[ ! `sudo -n uptime 2>&1|grep "load"|wc -l` -gt 0 ]] && echo '##### Require Password'
+            sudo -v
             sudo mkdir -p /etc/resolver
             sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
             dscacheutil -flushcache
@@ -147,6 +150,7 @@ if [[ ! $python ]]; then
     echo 'alias ls="ls -FG"' >> ~/.profile
     echo 'alias ip="ifconfig | grep netmask | grep -v 127.0.0.1"' >> ~/.profile
     echo 'alias ws="cd ~/Sites/"' >> ~/.profile
+    echo 'alias venv="source env/bin/activate"' >> ~/.profile
     echo '' >> ~/.profile
     . ~/.profile
 
@@ -193,6 +197,38 @@ if [[ ! $postgres ]]; then
     # setup postgis
     createdb template_postgis
     createlang plpgsql template_postgis
+fi
+    sed '
+    /#gzip  on;/ c\
+    #gzip  on;
+    include sites-enabled/*;
+    ' /usr/local/etc/nginx/nginx.conf
+
+# install php
+php=`brew list | grep php`
+if [[ ! $php ]]; then
+    echo '##### Installing Formula PHP...'
+    
+    # we need to get php from another source
+    brew tap josegonzalez/php
+    brew tap homebrew/dupes
+    brew install php54 --without-apache --with-fpm --with-imap --with-debug --with-mysql
+
+    # setup php
+    ln -sfv /usr/local/Cellar/php54/*.plist ~/Library/LaunchAgents
+    launchctl load ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+
+    # important paths
+    # /usr/local/etc/nginx/nginx.conf
+    # /usr/local/etc/php/5.4/php.ini
+    cd /usr/local/etc/nginx/
+    mv nginx.conf nginx.conf.old; sed '$d' nginx.conf.old > nginx.conf;
+    echo '    include sites-enabled/*;' >> nginx.conf
+    echo '}' >> nginx.conf
+    nginx -s reload
+
+    # now create a settings sites-enabled/mysite.dev.conf
+    # http://mwholt.blogspot.ch/2012/09/installing-nginx-php-mysql-on-mac-os-x.html
 fi
 
 # install oh-my-zsh
