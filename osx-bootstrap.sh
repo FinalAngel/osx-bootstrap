@@ -12,6 +12,8 @@ echo "OSX Bootstrap 1.0.2"
 echo "-------------------"
 echo ""
 
+# TODO: use a setup like extras/blah or lib/blah.sh and import only
+
 # ask for sudo password
 [[ ! `sudo -n uptime 2>&1|grep "load"|wc -l` -gt 0 ]] && echo '##### Require Password'
 sudo -v
@@ -63,8 +65,9 @@ fi
 
 # install helpfull formulas
 export formulas='
-    git 
-    hub 
+    git
+    git-flow
+    hub
     bash-completion
     ssh-copy-id
     wget
@@ -214,6 +217,14 @@ if [[ ! -f ~/.zshrc ]]; then
     echo '[[ -e ~/.profile ]] && emulate sh -c "source ~/.profile"' >> ~/.zshrc
 fi
 
+# installing compass
+`which -s compass`
+if [[ $? != 0 ]]; then
+    [[ ! `sudo -n uptime 2>&1|grep "load"|wc -l` -gt 0 ]] && echo '##### Require Password'
+    sudo -v
+    sudo gem install compass
+fi
+
 # configuring osx
 if [[ ! -f ~/.osx-bootstrap ]]; then
     echo '##### Configuring OSX...'
@@ -348,6 +359,8 @@ if [[ ! -f ~/.osx-bootstrap ]]; then
     # Speed up wake from sleep to 24 hours from an hour
     # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
     sudo pmset -a standbydelay 86400
+    # Enable Assistive Devices 
+    sudo touch /private/var/db/.AccessibilityAPIEnabled
     # Trackpad: enable tap to click for this user and for the login screen
     defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
     defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1

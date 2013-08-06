@@ -8,6 +8,8 @@ OSX Bootstrap
 - fixed an issue with sudo on etc/resolver
 - added venv alias
 - added valentia studio in favor of mysqlworkbench and pgadmin3
+- added gem compass
+- added formula git-flow
 
 1.0.0
 -----
