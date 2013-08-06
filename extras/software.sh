@@ -15,7 +15,10 @@ applications=/Applications/Downloaded
 downloads=~/Downloads/TMP
 mountpoint=/Volumes/TMP
 
+# TODOS
 # http://ftp.postgresql.org/pub/pgadmin3/release/v1.16.1/osx/pgadmin3-1.16.1.dmg#eula
+# add synergy
+# add https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg pkg installer
 export apps='
     http://www.skype.com/go/getskype-macosx.dmg
     http://mirror.switch.ch/ftp/mirror/videolan/vlc/2.0.8/macosx/vlc-2.0.8-intel64.dmg
@@ -30,6 +33,7 @@ export apps='
     https://www.valentina-db.com/en/applications-download/valentina-studio?section=files&task=download&cid=13_56d61c59a23f6005c1d7fefdb89f3796
     http://awesome.vanamco.com/downloads/ghostlab/latest/Ghostlab.dmg
     http://download.transmissionbt.com/files/Transmission-2.81.dmg
+    http://synergy.googlecode.com/files/synergy-1.4.12-MacOSX108-x86_64.dmg
     http://www.freemacsoft.net/downloads/AppCleaner_2.2.zip
     https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.21.zip
     http://www.irradiatedsoftware.com/download/SizeUp.zip
@@ -43,7 +47,8 @@ export apps='
     http://www.getharvest.com/harvest/mac/Harvest.zip
     http://downloads.hipchat.com.s3.amazonaws.com/osx/HipChat-2.0.zip
     http://download.spotify.com/SpotifyInstaller.zip
-    http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip'
+    http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip
+'
 for app in $apps
 do
     # TODO we should write each app link to a file and read if its already available
