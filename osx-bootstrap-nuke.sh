@@ -4,8 +4,8 @@
 clear
 
 # start uninstalling bootstrap
-echo "OSX Bootstrap 1.0.0"
-echo "-------------------"
+echo "OSX Bootstrap Nuke"
+echo "------------------"
 echo ""
 
 # ask for sudo password
