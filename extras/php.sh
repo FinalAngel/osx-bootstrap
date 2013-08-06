@@ -34,4 +34,3 @@ if [[ ! $php ]]; then
     # now create a settings sites-enabled/mysite.dev.conf
     # http://mwholt.blogspot.ch/2012/09/installing-nginx-php-mysql-on-mac-os-x.html
 fi
-
