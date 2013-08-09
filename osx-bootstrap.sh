@@ -14,7 +14,7 @@ echo ''
 
 # define helpers
 source_dir='https://raw.github.com/divio/osx-bootstrap/master'
-source <(curl -s $source_dir/core/helpers.sh)
+source /dev/stdin <<< "$(curl --insecure -s $source_dir/core/helpers.sh)"
 
 # include system with param $1
 bash <(curl -s $source_dir/core/system.sh $1)
