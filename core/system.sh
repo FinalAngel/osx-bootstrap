@@ -2,7 +2,7 @@
 
 # define helpers
 source_dir='https://raw.github.com/divio/osx-bootstrap/master'
-source <(curl $source_dir/core/helpers.sh)
+source /dev/stdin <<< "$(curl --insecure -s $source_dir/core/helpers.sh)"
 
 # require sudo password
 require_sudo
