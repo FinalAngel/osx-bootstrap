@@ -4,11 +4,15 @@
 clear
 
 # start bootstrap
-echo "OSX Bootstrap Projects"
-echo "----------------------"
-echo ""
+echo 'OSX Bootstrap Projects'
+echo '----------------------'
+echo ''
 
-# helper variables
+# define helpers
+$source_dir='https://raw.github.com/divio/osx-bootstrap/master'
+source $source_dir/core/helpers.sh
+
+# define variables
 workspace=~/Sites
 current_path=`pwd`
 port=8000

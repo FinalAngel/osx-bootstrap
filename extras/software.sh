@@ -4,13 +4,18 @@
 clear
 
 # start bootstrap
-echo "OSX Bootstrap Software"
-echo "----------------------"
-echo ""
+echo 'OSX Bootstrap Software'
+echo '----------------------'
+echo ''
 
 # installing dmg files
 echo '##### Installing Software...'
 
+# define helpers
+$source_dir='https://raw.github.com/divio/osx-bootstrap/master'
+source $source_dir/core/helpers.sh
+
+# define variables
 applications=/Applications/Downloaded
 downloads=~/Downloads/TMP
 mountpoint=/Volumes/TMP
