@@ -9,8 +9,8 @@ echo "-----------------"
 echo ""
 
 # define helpers
-$source_dir='https://raw.github.com/divio/osx-bootstrap/master'
-source $source_dir/core/helpers.sh
+source_dir='https://raw.github.com/divio/osx-bootstrap/master'
+source <(curl -s $source_dir/core/helpers.sh)
 
 # install php
 php=`brew list | grep php`

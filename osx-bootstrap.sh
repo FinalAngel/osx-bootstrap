@@ -13,27 +13,27 @@ echo '-------------------'
 echo ''
 
 # define helpers
-$source_dir='https://raw.github.com/divio/osx-bootstrap/master'
-source $source_dir/core/helpers.sh
+source_dir='https://raw.github.com/divio/osx-bootstrap/master'
+source <(curl -s $source_dir/core/helpers.sh)
 
 # include system with param $1
-bash $source_dir/core/system.sh $1
+bash <(curl -s $source_dir/core/system.sh $1)
 # install brew
-bash $source_dir/core/brew.sh
+bash <(curl -s $source_dir/core/brew.sh)
 # install python
-bash $source_dir/core/python.sh
+bash <(curl -s $source_dir/core/python.sh)
 # install mysql
-bash $source_dir/core/mysql.sh
+bash <(curl -s $source_dir/core/mysql.sh)
 # install postgres
-bash $source_dir/core/postgres.sh
+bash <(curl -s $source_dir/core/postgres.sh)
 # install compass
-bash $source_dir/core/compass.sh
+bash <(curl -s $source_dir/core/compass.sh)
 # install zsh
-bash $source_dir/core/zsh.sh
+bash <(curl -s $source_dir/core/zsh.sh)
 # install defaults
-bash $source_dir/core/defaults.sh
+bash <(curl -s $source_dir/core/defaults.sh)
 # install github
-bash $source_dir/core/github.sh
+bash <(curl -s $source_dir/core/github.sh)
 
 # ensure bootstrap is ready
 [[ -f ~/.osx-bootstrap-tmp ]] && mv ~/.osx-bootstrap-tmp ~/.osx-bootstrap && chmod +x ~/.osx-bootstrap
