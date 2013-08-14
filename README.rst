@@ -46,6 +46,7 @@ The following software will be installed using the core modules:
   | git, git-flow, hub, bash-completion, ssh-copy-id, wget, dnsmasq, nginx, cowsay, 
   | python, mysql, postgres, postgis and their requirements
 * | PIP installs: virtualenv, virtualenvwrapper, numpy
+* | sass / compass
 * | oh-my-zsh
 
 Additionally ``~/.profile`` and ``~/.zshrc`` will be setup for you.
