@@ -70,7 +70,7 @@ echo '##### Note: Github settings will remain!'
 rm -rf ~/.ssh/*
 
 # core
-rm -rf ~/osx-bootstrap
+rm -rf ~/.osx-bootstrap
 
 # done
 echo '##### OSX Bootstrap has been successfully uninstalled!'
