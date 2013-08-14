@@ -25,8 +25,7 @@ Some scripts require additional configuration, please refere to the source code 
 You will have to take the following actions to complete the installation for the core modules:
 
 * | Add your RSA key (``cat ~/.ssh/id_rsa.pub``) into your github.com account under ``SSH Keys``
-* | The default hostname will be set to **osx-`whoami`** you can overwrite this by adding the desired hostname using:
-  | ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/install.sh) my-computer``
+* | The default hostname will be set to **osx-`whoami`** you can overwrite this by adding the desired hostname inside the install.sh curl.
 
 
 About Bootstrap
