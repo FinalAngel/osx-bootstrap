@@ -1,14 +1,15 @@
 #!/bin/bash
 
 # define helpers
-source_dir='~/.osx-bootstrap'
+source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # require sudo password
 require_sudo
 
 # configuring osx
-if [[ ! -f ~/.osx-bootstrap ]]; then
+if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
+    echo ''
     echo '##### Configuring OSX...'
 
     # Enabling subpixel font rendering on non-Apple LCDs

@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # define helpers
-source_dir='~/.osx-bootstrap'
+source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # install mysql
 mysql=`brew list | grep mysql`
 if [[ ! $mysql ]]; then
+    echo ''
     echo '##### Installing Formula MySQL...'
     brew install mysql
     brew install mysql-connector-c

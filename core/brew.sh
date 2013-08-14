@@ -1,17 +1,19 @@
 #!/bin/bash
 
 # define helpers
-source_dir='~/.osx-bootstrap'
+source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # install homebrew
 `which -s brew`
 if [[ $? != 0 ]]; then
+    echo ''
     echo '##### Installing Homebrew...'
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
     brew update
     brew doctor
 else
+    echo ''
     echo '##### Running Homebrew Updates...'
     brew update
     brew doctor
@@ -33,6 +35,7 @@ for formula in $formulas
 do
     tmp=`brew list | grep $formula`
     if [[ ! $tmp ]]; then
+        echo ''
         echo '##### Installing Formula '$formula'...'
         brew install $formula
 

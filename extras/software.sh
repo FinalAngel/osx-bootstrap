@@ -8,11 +8,8 @@ echo 'OSX Bootstrap Software'
 echo '----------------------'
 echo ''
 
-# installing dmg files
-echo '##### Installing Software...'
-
 # define helpers
-source_dir='~/.osx-bootstrap'
+source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # define variables

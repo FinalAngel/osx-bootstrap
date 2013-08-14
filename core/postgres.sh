@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # define helpers
-source_dir='~/.osx-bootstrap'
+source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # install postgres
 postgres=`brew list | grep postgres`
 if [[ ! $postgres ]]; then
+    echo ''
     echo '##### Installing Formula Postgres...'
     
     PYTHON=/usr/local/bin/python brew install postgres

@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # define helpers
-source_dir='~/.osx-bootstrap'
+source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # require sudo password
 require_sudo
 
 if [[ ! -f ~/.ssh/id_rsa ]]; then
+    echo ''
     echo '##### Please enter your github username: '
     read github_user
     echo '##### Please enter your github email address: '
@@ -35,6 +36,7 @@ if [[ ! -f ~/.ssh/id_rsa ]]; then
         cd ~/.ssh
         ssh-keygen -t rsa -C $github_email
         pbcopy < ~/.ssh/id_rsa.pub
+        echo ''
         echo '##### The following rsa key has been copied to your clipboard: '
         cat ~/.ssh/id_rsa.pub
         echo '##### Follow step 3 to complete: https://help.github.com/articles/generating-ssh-keys'

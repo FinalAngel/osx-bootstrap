@@ -10,25 +10,27 @@ echo '-------------------'
 echo ''
 
 # define helpers
-source_dir='~/.osx-bootstrap'
-source_file='$source_dir/.osx-bootstrap'
-source_file_tmp='$source_dir/.osx-bootstrap-tmp'
+source_dir=~/.osx-bootstrap
+source_file=$source_dir/.osx-bootstrap
+source_file_tmp=$source_dir/.osx-bootstrap-tmp
 source $source_dir/core/helpers.sh
 
 # we need to download the repo for the absolute paths
 if [[ ! -d ~/.osx-bootstrap ]]; then
+    echo '##### Downloading Bootstrap...'
 	# autoupdate bootstrap file
 	git clone https://github.com/divio/osx-bootstrap.git $source_dir
 	# hide folder
 	chflags hidden $source_dir
 else
 	# update repo
+    echo '##### Running Bootstrap Updates...'
 	cd $source_dir
 	git pull origin master
 fi
 
 # create bootstrap tmp
-[[ -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
+[[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
 
 # include system with param $1
 source $source_dir/core/system.sh $1
@@ -50,7 +52,7 @@ source $source_dir/core/defaults.sh
 source $source_dir/core/github.sh
 
 # create bootstrap file
-[[ -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
+[[ ! -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
 
 # done
 echo ''

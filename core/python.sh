@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # define helpers
-source_dir='~/.osx-bootstrap'
+source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # install python
 python=`brew list | grep python`
 if [[ ! $python ]]; then
+    echo ''
     echo '##### Installing Formula Python...'
     brew install python
 

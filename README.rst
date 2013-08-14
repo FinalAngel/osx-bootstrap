@@ -17,7 +17,7 @@ Install Bootstrap
 -----------------
 
 #. | Open a terminal and run:
-   | ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh)``
+   | ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/install.sh)``
 
 You will need to enter your **sudo password** and **github information** during the installation process.
 
@@ -26,7 +26,7 @@ You will have to take the following actions to complete the installation for the
 
 * | Add your RSA key (``cat ~/.ssh/id_rsa.pub``) into your github.com account under ``SSH Keys``
 * | The default hostname will be set to **osx-`whoami`** you can overwrite this by adding the desired hostname using:
-  | ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/osx-bootstrap.sh) my-computer``
+  | ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/install.sh) my-computer``
 
 
 About Bootstrap

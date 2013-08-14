@@ -4,12 +4,12 @@
 clear
 
 # start bootstrap
-echo "OSX Bootstrap Heroku"
-echo "--------------------"
-echo ""
+echo 'OSX Bootstrap Heroku'
+echo '--------------------'
+echo ''
 
 # define helpers
-source_dir='~/.osx-bootstrap'
+source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # require sudo password
