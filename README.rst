@@ -28,6 +28,20 @@ You will have to take the following actions to complete the installation for the
 * | The default hostname will be set to **osx-`whoami`** you can overwrite this by adding the desired hostname inside the install.sh curl.
 
 
+Install Extras
+--------------
+
+You can install additional modules such as:
+
+* PHP
+* Node.js and NPM
+* Ruby and Ruby on Rails
+
+For a list of all modules consult the ``extras/`` folder. Use the same pattern as install.sh above.
+
+Extras are not maintained within the bootstrap update process. Edit the ``.osx-bootstrap`` file within ``~/.osx-bootstrap/`` to add those dependencies. This file will not be updated automatically.
+
+
 About Bootstrap
 ---------------
 
