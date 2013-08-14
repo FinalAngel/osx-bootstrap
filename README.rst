@@ -64,5 +64,5 @@ run ``bootstrap`` to start the osx-bootstrap auto update.
 Uninstalling Bootstrap
 ----------------------
 
-| ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/extras/nuke.sh)``
+| ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/core/nuke.sh)``
 | uninstalls osx-bootstrap.
