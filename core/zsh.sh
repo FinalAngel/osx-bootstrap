@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # define helpers
-source_dir='https://raw.github.com/divio/osx-bootstrap/master'
-source /dev/stdin <<< "$(curl --insecure -s $source_dir/core/helpers.sh)"
+source_dir='~/.osx-bootstrap'
+source $source_dir/core/helpers.sh
 
 # install oh-my-zsh
 if [[ ! -f ~/.zshrc ]]; then

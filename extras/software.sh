@@ -12,8 +12,8 @@ echo ''
 echo '##### Installing Software...'
 
 # define helpers
-source_dir='https://raw.github.com/divio/osx-bootstrap/master'
-source /dev/stdin <<< "$(curl --insecure -s $source_dir/core/helpers.sh)"
+source_dir='~/.osx-bootstrap'
+source $source_dir/core/helpers.sh
 
 # define variables
 applications=/Applications/Downloaded
@@ -42,6 +42,7 @@ export apps='
     http://www.freemacsoft.net/downloads/AppCleaner_2.2.zip
     https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.21.zip
     http://www.irradiatedsoftware.com/download/SizeUp.zip
+    http://cachefly.alfredapp.com/Alfred_2.0.7_205.zip
     http://www.codeux.com/textual/private/downloads/builds/trial-versions/Textual-Trial-g441bee9.zip
     http://download.spotify.com/SpotifyInstaller.zip
     http://incident57.com/codekit/files/codekit-8317.zip

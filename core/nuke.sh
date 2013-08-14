@@ -9,8 +9,8 @@ echo '------------------'
 echo ''
 
 # define helpers
-source_dir='https://raw.github.com/divio/osx-bootstrap/master'
-source /dev/stdin <<< "$(curl --insecure -s $source_dir/core/helpers.sh)"
+source_dir='~/osx-bootstrap'
+source $source_dir/core/helpers.sh
 
 # require sudo password
 require_sudo
@@ -69,4 +69,8 @@ echo '##### Uninstall core/github'
 echo '##### Note: Github settings will remain!'
 rm -rf ~/.ssh/*
 
+# core
+rm -rf ~/osx-bootstrap
+
+# done
 echo '##### OSX Bootstrap has been successfully uninstalled!'
