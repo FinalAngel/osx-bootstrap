@@ -2,6 +2,15 @@
 OSX Bootstrap
 =============
 
+1.2.0
+-----
+- adds bootstrap shortcut
+- refactor installation to download the repo
+- fixes issues with core modules
+- fixes issues with extras modules
+- added extra npm
+- added install.sh
+
 1.1.0
 -----
 - restructure to core modules
