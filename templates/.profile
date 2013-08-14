@@ -14,6 +14,7 @@ alias ip="ifconfig | grep netmask | grep -v 127.0.0.1"
 alias ws="cd ~/Sites/"
 alias venv="source env/bin/activate"
 alias denv="deactivate"
+alias bootstrap="~/.osx-bootstrap/.osx-bootstrap"
 
 ##### Homebrew Formula: bash_completion
 ##### Disabled cause of issues with oh-my-zsh
