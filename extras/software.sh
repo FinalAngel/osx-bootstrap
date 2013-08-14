@@ -8,6 +8,8 @@ echo 'OSX Bootstrap Software'
 echo '----------------------'
 echo ''
 
+echo 'Warning: this extra is still in development'
+
 # define helpers
 source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
