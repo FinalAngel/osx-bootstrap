@@ -58,10 +58,11 @@ Be aware that the core modules are required!
 Using Bootstrap
 ---------------
 
-* run ``~/.osx-bootstrap`` to update osx-bootstrap and your system
+run ``bootstrap`` to start the osx-bootstrap auto update.
 
 
 Uninstalling Bootstrap
 ----------------------
 
-* run ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/extras/nuke.sh)`` to uninstall osx-bootstrap core modules
+| ``bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/extras/nuke.sh)``
+| uninstalls osx-bootstrap.
