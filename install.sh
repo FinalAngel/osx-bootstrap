@@ -9,11 +9,10 @@ echo 'OSX Bootstrap 1.2.0'
 echo '-------------------'
 echo ''
 
-# define helpers
+# define variables
 source_dir=~/.osx-bootstrap
 source_file=$source_dir/.osx-bootstrap
 source_file_tmp=$source_dir/.osx-bootstrap-tmp
-source $source_dir/core/helpers.sh
 
 # we need to download the repo for the absolute paths
 if [[ ! -d ~/.osx-bootstrap ]]; then
@@ -28,6 +27,9 @@ else
 	cd $source_dir
 	git pull origin master
 fi
+
+# define helpers
+source $source_dir/core/helpers.sh
 
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
