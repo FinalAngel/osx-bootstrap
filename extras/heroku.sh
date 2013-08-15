@@ -20,7 +20,8 @@ if [[ $? != 0 ]]; then
     # Install Heroku toolbelt
     echo "##### Installing heroku toolbelt"
     curl -O http://assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg
-    sudo installer -store -pkg /tmp/heroku-toolbelt.pkg
+    sudo installer -store -pkg heroku-toolbelt.pkg
+    rm -rf heroku-toolbelt.pkg
     echo 'Note: open https://api.heroku.com/login'
     echo 'Note: https://api.heroku.com/signup'
     read -p "Press return when done with Heroku installation"
