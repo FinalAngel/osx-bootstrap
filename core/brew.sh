@@ -47,6 +47,7 @@ do
 
             # setup dnsmask daemon
             sudo ln -sfv /usr/local/opt/dnsmasq/*.plist /Library/LaunchDaemons
+            sudo chown root /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
             sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
 
             # setup resolver
