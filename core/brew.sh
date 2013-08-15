@@ -10,8 +10,6 @@ if [[ $? != 0 ]]; then
     echo ''
     echo '##### Installing Homebrew...'
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-    brew update
-    brew doctor
 else
     echo ''
     echo '##### Running Homebrew Updates...'
