@@ -38,6 +38,10 @@ if [[ ! -d ~/Sites ]]; then
     mkdir -p ~/Sites
 fi
 
+if [[ ! -d ~/Library/LaunchAgents ]]; then
+    mkdir -p ~/Library/LaunchAgents
+fi
+
 echo ''
 echo '##### Running OSX Software Updates...'
 sudo softwareupdate -i -a
