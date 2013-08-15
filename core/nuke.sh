@@ -12,13 +12,15 @@ echo ''
 source_dir='~/osx-bootstrap'
 source $source_dir/core/helpers.sh
 
+# ensure you want to remove all components
+read -p "##### Are you sure you want to remove osx-bootstrap? [Yn]" -n 1 -r
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    echo ''
+    exit
+fi
+
 # require sudo password
 require_sudo
-
-# core/system.sh
-echo '##### Uninstall core/system'
-echo '##### Note: ~/Sites will not be removed!'
-rm -rf ~/.osx-bootstrap
 
 # core/brew.sh
 echo '##### Uninstall core/brew'
@@ -28,8 +30,8 @@ rm -rf /usr/local/Cellar
 rm -rf /usr/local/.git
 rm -rf /Library/Caches/Homebrew
 # templates
+rm -rf /usr/local/etc
 sudo rm -rf /etc/resolver
-sudo rm -rf /usr/local/etc/dnsmasq.conf
 # agents
 sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
 sudo rm -rf /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
@@ -69,7 +71,9 @@ echo '##### Uninstall core/github'
 echo '##### Note: Github settings will remain!'
 rm -rf ~/.ssh/*
 
-# core
+# core/system.sh
+echo '##### Uninstall core/system'
+echo '##### Note: ~/Sites will not be removed!'
 rm -rf ~/.osx-bootstrap
 
 # done
