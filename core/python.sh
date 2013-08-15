@@ -11,15 +11,15 @@ if [[ ! $python ]]; then
     echo '##### Installing Formula Python...'
     brew install python
 
-    # create profile
-    cp -rf $source_dir/templates/.profile ~/
-    # load profile
-    source ~/.profile
-
     # pip installs | after installs are restricted
     pip install --upgrade setuptools
     pip install --upgrade pip
     pip install virtualenv
     pip install virtualenvwrapper
     pip install numpy
+
+    # create profile
+    cp -rf $source_dir/templates/.profile ~/
+    # load profile
+    source ~/.profile
 fi
