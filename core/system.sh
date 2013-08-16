@@ -8,7 +8,7 @@ source $source_dir/core/helpers.sh
 require_sudo
 
 # set hostname
-if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
+if [[ ! -f $source_dir/.osx-bootstrap ]]; then
     echo ''
     echo '##### Setting Computer Name'
     # define hostname
