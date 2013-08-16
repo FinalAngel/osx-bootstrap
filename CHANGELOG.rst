@@ -8,6 +8,9 @@ OSX Bootstrap
 - refactor installation to download the repo
 - fixes issues with core modules
 - fixes issues with extras modules
+- fixed an issue with ordering in brew.sh
+- fixed an issue with ordering in python.sh
+- fixed an issue with LaunchAgents
 - added extra npm
 - added install.sh
 
