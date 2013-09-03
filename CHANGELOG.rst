@@ -2,6 +2,11 @@
 OSX Bootstrap
 =============
 
+1.2.1
+-----
+- fixed an issue with postgres throttling respawn
+- fixed dynamic path within system.sh
+
 1.2.0
 -----
 - adds bootstrap shortcut
