@@ -16,8 +16,13 @@ if [[ ! $postgres ]]; then
     PYTHON=/usr/local/bin/python brew install postgres
 
     # update system
-    sudo sysctl -w kern.sysv.shmall=65536
-    sudo sysctl -w kern.sysv.shmmax=16777216
+    sudo sysctl -w kern.sysv.shmmax=1610612736
+    sudo sysctl -w kern.sysv.shmmin=1
+    sudo sysctl -w kern.sysv.shmmni=256
+    sudo sysctl -w kern.sysv.shmseg=64
+    sudo sysctl -w kern.sysv.shmall=393216
+    # make sure settings stay after restart
+    sudo cp -rf $source_dir/templates/sysctl.conf /etc
 
     # setup postgres
     ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
@@ -29,6 +34,9 @@ if [[ ! $postgres ]]; then
 
     # brew fixes
     brew unlink libxml2
+
+    # install required gem
+    sudo gem install pg
     
     # setup postgres
     createuser postgres -s
