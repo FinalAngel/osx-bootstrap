@@ -19,7 +19,7 @@ vlc:				http://mirror.switch.ch/ftp/mirror/videolan/vlc/2.0.8/macosx/vlc-2.0.8-i
 # licence
 1password:			https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.21.zip
 adobe_cc:			https://ccmdls.adobe.com/AdobeProducts/PHSP/14/osx10/AAMmetadataLS20/CreativeCloudInstaller.dmg
-codekit:			http://incident57.com/codekit/files/codekit-8317.zip
+codekit:			http://incident57.com/codekit/files/codekit-8326.zip
 ghostlab:			http://awesome.vanamco.com/downloads/ghostlab/latest/Ghostlab.dmg
 hipchat:			http://downloads.hipchat.com.s3.amazonaws.com/osx/HipChat-2.0.zip
 kaleidoscope:		http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.0.1-114.zip
