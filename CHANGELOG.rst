@@ -6,6 +6,7 @@ OSX Bootstrap
 -----
 - fixed an issue with postgres throttling respawn
 - fixed dynamic path within system.sh
+- added sudo keep-alive
 
 1.2.0
 -----
