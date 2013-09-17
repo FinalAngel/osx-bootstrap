@@ -2,6 +2,10 @@
 OSX Bootstrap
 =============
 
+1.2.2
+-----
+- Added brew redis
+
 1.2.1
 -----
 - fixed an issue with postgres throttling respawn

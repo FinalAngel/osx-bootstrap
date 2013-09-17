@@ -28,6 +28,7 @@ export formulas='
     dnsmasq
     nginx
     cowsay
+    redis
 '
 for formula in $formulas
 do
@@ -61,6 +62,11 @@ do
         if [[ $formula = 'nginx' ]]; then
             ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
             launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+        fi
+
+        if [[ $formula = 'redis' ]]; then
+            ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+            launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
         fi
     fi
 done
