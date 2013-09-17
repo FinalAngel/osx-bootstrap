@@ -56,9 +56,6 @@ source $source_dir/core/github.sh
 # create bootstrap file
 [[ ! -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
 
-# kill sudo
-sudo -K
-
 # done
 echo ''
 cowsay 'Bootstrapp Ready!'
