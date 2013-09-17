@@ -5,7 +5,7 @@ clear
 
 # start bootstrap
 echo ''
-echo 'OSX Bootstrap 1.2.0'
+echo 'OSX Bootstrap 1.2.1'
 echo '-------------------'
 echo ''
 
