@@ -29,3 +29,4 @@ textual:			http://www.codeux.com/textual/private/downloads/builds/trial-versions
 things:				http://culturedcode.cachefly.net/things/Things_2.2.1.zip
 transmission:		http://download.transmissionbt.com/files/Transmission-2.81.dmg
 transmit:			http://www.panic.com/transmit/d/Transmit%204.4.1.zip
+valentina:			https://www.valentina-db.com/en/applications-download/valentina-studio?section=files&task=download&cid=13_56d61c59a23f6005c1d7fefdb89f3796
