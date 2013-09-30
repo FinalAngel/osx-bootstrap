@@ -52,6 +52,7 @@ source $source_dir/core/zsh.sh
 source $source_dir/core/defaults.sh
 # install github
 source $source_dir/core/github.sh
+# place your extras here
 
 # create bootstrap file
 [[ ! -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
