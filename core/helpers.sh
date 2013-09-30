@@ -2,7 +2,7 @@
 
 # sudo helper
 function require_sudo() {
-    echo '' && echo '##### Require Password'
+    [[ ! `sudo -n uptime 2>&1|grep "load"|wc -l` -gt 0 ]] && echo '' && echo '##### Require Password'
     # keep sudo alive
     sudo -v
     while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
