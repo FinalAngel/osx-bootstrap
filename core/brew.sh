@@ -29,6 +29,7 @@ export formulas='
     nginx
     cowsay
     redis
+    geoip
 '
 for formula in $formulas
 do
