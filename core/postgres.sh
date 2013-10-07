@@ -44,4 +44,6 @@ if [[ ! $postgres ]]; then
     # setup postgis
     createdb template_postgis
     createlang plpgsql template_postgis
+    psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/postgis.sql
+    psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/spatial_ref_sys.sql
 fi
