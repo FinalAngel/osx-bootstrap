@@ -4,7 +4,7 @@ OSX Bootstrap
 
 1.2.2
 -----
-- Added brew redis
+- added brew redis
 - added brew formula geoip
 - fixes an issue with postgis template
 
