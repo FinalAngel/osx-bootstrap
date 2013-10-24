@@ -2,7 +2,7 @@
 OSX Bootstrap
 =============
 
-This is a bash script automating configuration and installation of **OSX Mountain Lion** workstations.
+This is a bash script automating configuration and installation of **OSX** workstations.
 
 
 Requirements
