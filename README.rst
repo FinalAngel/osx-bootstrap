@@ -45,7 +45,7 @@ Extras are not maintained within the bootstrap update process. Edit the ``.osx-b
 Upgrading
 ---------
 
-If you are upgrading your system from Lion/Mountain Lion to **Mavericks**, osx-bootstrap won't stay in your way. Just install the upgrade and run **Xcode** and check that the Command Line Tools are still installed.
+If you are upgrading your system from Lion/Mountain Lion to **Mavericks**, OSX Bootstrap won't stay in your way. Just install the upgrade and run **Xcode** and check that the Command Line Tools are still installed.
 
 
 About Bootstrap
