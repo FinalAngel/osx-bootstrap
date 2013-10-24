@@ -8,7 +8,7 @@ This is a bash script automating configuration and installation of **OSX Mountai
 Requirements
 ------------
 
-#. Install a **fresh** version of OSX Mountain Lion (10.8)
+#. Install a **fresh** version of OSX (10.8 or 10.9)
 #. Install Xcode from the Mac App Store
 #. Start Xcode, open ``Xcode > Preferences > Downloads`` and install the **Command Line Tools**
 
@@ -40,6 +40,12 @@ You can install additional modules such as:
 For a list of all modules consult the ``extras/`` folder. Use the same pattern as install.sh above.
 
 Extras are not maintained within the bootstrap update process. Edit the ``.osx-bootstrap`` file within ``~/.osx-bootstrap/`` to add those dependencies. This file will not be updated automatically.
+
+
+Upgrading
+---------
+
+If you are upgrading your system from Lion/Mountain Lion to **Mavericks**, osx-bootstrap won't stay in your way. Just install the upgrade and run **Xcode** and check that the Command Line Tools are still installed.
 
 
 About Bootstrap
