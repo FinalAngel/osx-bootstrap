@@ -23,3 +23,10 @@ if [[ ! $python ]]; then
     # load profile
     source ~/.profile
 fi
+
+##### remove python manually
+# brew uninstall -f python
+# rm -rf `brew --cache`
+# brew cleanup
+# brew prune
+# brew doctor
