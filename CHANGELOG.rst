@@ -2,6 +2,11 @@
 OSX Bootstrap
 =============
 
+1.2.3
+-----
+- fixed issues with extras/npm.sh
+- fixed issues with extras/ruby.sh
+
 1.2.2
 -----
 - added brew redis
