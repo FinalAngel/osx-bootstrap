@@ -13,8 +13,8 @@ source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # install npm
-`brew list | grep node`
-[[ $1 != 0 ]]; then
+npm=`brew list | grep node`
+if [[ ! $npm ]]; then
 	# node installation
 	brew install node
 
