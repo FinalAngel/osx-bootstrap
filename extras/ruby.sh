@@ -13,8 +13,8 @@ source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh
 
 # install ruby
-`brew list | grep ruby`
-[[ $1 != 0 ]]; then
+ruby=`brew list | grep ruby`
+if [[ ! $ruby ]]; then
 	# RVM installation
 	curl -L https://get.rvm.io | bash -s stable --ruby
 	source ~/.rvm/scripts/rvm
