@@ -11,7 +11,7 @@ Requirements
 #. Install a **fresh** version of OSX (10.8 or 10.9)
 #. Install Xcode from the Mac App Store
 #. **10.8**: Start Xcode, open ``Xcode > Preferences > Downloads`` and install the **Command Line Tools**
-#. **10.9**: open a terminal and run ``xcode-select --install``
+#. **10.9**: Open a terminal and run ``xcode-select --install``
 
 Install Bootstrap
 -----------------
