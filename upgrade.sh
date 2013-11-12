@@ -17,4 +17,4 @@ source_file=$source_dir/.osx-bootstrap
 cp -rf $source_dir/install.sh $source_file && chmod +x $source_file
 
 # continue to bootstrap
-bootstrap
+bash $source_file
