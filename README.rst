@@ -41,6 +41,8 @@ For a list of all modules consult the ``extras/`` folder. Use the same pattern a
 
 Extras are not maintained within the bootstrap update process. Edit the ``.osx-bootstrap`` file within ``~/.osx-bootstrap/`` to add those dependencies. This file will not be updated automatically.
 
+However, if you want to force an upgrade (to latest version) just run ``.osx-bootstrap/upgrade.sh``.
+
 
 Upgrading
 ---------
