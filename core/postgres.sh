@@ -16,11 +16,9 @@ if [[ ! $postgres ]]; then
     PYTHON=/usr/local/bin/python brew install postgres
 
     # update system
-    sudo sysctl -w kern.sysv.shmmax=1610612736
-    sudo sysctl -w kern.sysv.shmmin=1
-    sudo sysctl -w kern.sysv.shmmni=256
-    sudo sysctl -w kern.sysv.shmseg=64
-    sudo sysctl -w kern.sysv.shmall=393216
+    # http://blog.55minutes.com/2013/09/postgresql-93-brew-upgrade/
+    sudo sysctl -w kern.sysv.shmall=65536
+    sudo sysctl -w kern.sysv.shmmax=16777216
     # make sure settings stay after restart
     sudo cp -rf $source_dir/templates/sysctl.conf /etc
 

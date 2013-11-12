@@ -2,6 +2,11 @@
 OSX Bootstrap
 =============
 
+1.2.4
+-----
+- added upgrade file
+- fixed an issue with postgres throttling and added source
+
 1.2.3
 -----
 - fixed issues with extras/npm.sh
