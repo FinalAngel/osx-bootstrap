@@ -70,6 +70,8 @@ if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
     defaults write com.apple.finder ShowStatusBar -bool true
     # Avoiding creating stupid .DS_Store files on network volumes
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+    # Disable dashboard
+    defaults write com.apple.dashboard mcx-disabled -boolean YES
     # Show the ~/Library folder
     chflags nohidden ~/Library
 
