@@ -6,6 +6,7 @@ OSX Bootstrap
 -----
 - added upgrade file
 - fixed an issue with postgres throttling and added source
+- removed mysql-connector-c dependency
 
 1.2.3
 -----
