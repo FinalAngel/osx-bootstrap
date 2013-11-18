@@ -10,10 +10,6 @@ if [[ ! $mysql ]]; then
     echo ''
     echo '##### Installing Formula MySQL...'
     brew install mysql
-    brew install mysql-connector-c
-
-    # link connector
-    brew link --overwrite mysql-connector-c
 
     # setup mysql
     ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
