@@ -19,7 +19,7 @@ if [[ ! -f ~/.ssh/id_rsa ]]; then
         # setup config
         git config --global user.name $github_user
         git config --global user.email $github_email
-        git config --global github.user g3d
+        git config --global github.user $github_user
         git config --global github.token your_token_here
         git config --global color.ui true
         git config --global push.default matching
