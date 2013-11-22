@@ -9,7 +9,7 @@ source $source_dir/core/helpers.sh
 if [[ $? != 0 ]]; then
     echo ''
     echo '##### Installing Homebrew...'
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 else
     echo ''
     echo '##### Running Homebrew Updates...'
