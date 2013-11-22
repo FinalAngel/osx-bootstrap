@@ -7,6 +7,7 @@ OSX Bootstrap
 - added upgrade file
 - fixed an issue with postgres throttling and added source
 - fixed an issue with git config --global github.user
+- fixed homebrew install url
 - removed mysql-connector-c dependency
 
 1.2.3
