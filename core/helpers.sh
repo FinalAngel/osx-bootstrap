@@ -5,13 +5,11 @@ function require_sudo() {
     if [[ ! `sudo -n uptime 2>&1|grep "load"|wc -l` -gt 0 ]]; then
         echo ''
         # keep sudo alive
-        [[ ! $password ]] && read -s -p "##### Enter Password: " password
+        [[ ! $password ]] && read -s -p "##### Enter Sudo Password: " password
         echo $password | sudo -S -v
 
         while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
     fi
-
-    echo $password
 }
 
 # helper function for reboot
