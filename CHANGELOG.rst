@@ -2,6 +2,10 @@
 OSX Bootstrap
 =============
 
+1.2.5
+-----
+- fixed sudo alive
+
 1.2.4
 -----
 - added upgrade file

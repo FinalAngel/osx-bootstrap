@@ -5,14 +5,15 @@ clear
 
 # start bootstrap
 echo ''
-echo 'OSX Bootstrap 1.2.4'
+echo 'OSX Bootstrap 1.2.5'
 echo '-------------------'
 echo ''
 
 # define variables
-source_dir=~/.osx-bootstrap
-source_file=$source_dir/.osx-bootstrap
-source_file_tmp=$source_dir/.osx-bootstrap-tmp
+declare source_dir=~/.osx-bootstrap
+declare source_file=$source_dir/.osx-bootstrap
+declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
+declare password
 
 # we need to download the repo for the absolute paths
 if [[ ! -d ~/.osx-bootstrap ]]; then
