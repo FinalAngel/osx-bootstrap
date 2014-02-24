@@ -4,10 +4,17 @@
 function require_sudo() {
     whoami | grep "root" > /dev/null
     if [ $? -eq 1 ] || [ "$1" = "" ]; then
-        echo ''
-        # keep sudo alive
-        [[ ! $password ]] && read -s -p "##### Enter Sudo Password: " password
-        echo $password | sudo -v -S
+        echo ""
+        echo "##### Enter Sudo Password: "
+        sudo -v
+         
+        # Keep-alive: update existing sudo time stamp if set, otherwise do nothing.
+        while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+         
+        # Example: do stuff over the next 30+ mins that requires sudo here or there.
+        function wait() {
+            echo -n "["; for i in {1..60}; do sleep $1; echo -n =; done; echo "]"
+        }
     fi
 }
 
