@@ -23,10 +23,9 @@ if [[ ! $npm ]]; then
 
 	# att path
 	export NODE_PATH="/usr/local/lib/node"
-	# path for
-	# PATH="/usr/local/share/npm/bin:$PATH"
+	export PATH="/usr/local/share/npm/bin:$PATH"
 
 	# install additional packages
-	# npm install -g bower
-	# npm install -g grunt-cli
+	npm install -g bower
+	npm install -g grunt-cli
 fi
