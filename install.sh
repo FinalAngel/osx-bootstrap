@@ -18,7 +18,7 @@ declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
 if [[ ! -d ~/.osx-bootstrap ]]; then
     echo '##### Installing Xcode'
 	# include xcode
-	source https://raw.github.com/divio/osx-bootstrap/master/core/xcode.sh
+	bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/core/xcode.sh)
     
     echo '##### Downloading Bootstrap...'
 	# autoupdate bootstrap file
@@ -34,7 +34,7 @@ fi
 
 # define helpers
 source $source_dir/core/helpers.sh
-
+     
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
 
