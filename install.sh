@@ -35,6 +35,8 @@ source $source_dir/core/helpers.sh
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
 
+# include xcode
+source $source_dir/core/xcode.sh $1
 # include system with param $1
 source $source_dir/core/system.sh $1
 # install brew
