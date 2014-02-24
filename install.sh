@@ -16,10 +16,6 @@ declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
 
 # we need to download the repo for the absolute paths
 if [[ ! -d ~/.osx-bootstrap ]]; then
-    echo '##### Installing Xcode'
-	# include xcode
-	bash <(curl -s https://raw.github.com/divio/osx-bootstrap/master/core/xcode.sh)
-    
     echo '##### Downloading Bootstrap...'
 	# autoupdate bootstrap file
 	git clone https://github.com/divio/osx-bootstrap.git $source_dir
