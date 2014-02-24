@@ -54,10 +54,6 @@ echo '##### Uninstall core/mysql'
 launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 rm -rf ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
-# core/compass
-echo '##### Uninstall core/compass'
-sudo gem uninstall compass
-
 # core/zsh
 echo '##### Uninstall core/zsh'
 bash ~/oh-my-zsh/tools/uninstall.sh
