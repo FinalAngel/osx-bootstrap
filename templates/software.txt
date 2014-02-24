@@ -1,5 +1,4 @@
 # free
-alfred:				http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip
 appcleaner:			http://www.freemacsoft.net/downloads/AppCleaner_2.2.1.zip
 caffeine:			http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip
 dropbox:			https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%202.2.8.dmg
@@ -12,7 +11,7 @@ skype:				http://www.skype.com/go/getskype-macosx.dmg
 sourcetree:			http://downloads.atlassian.com/software/sourcetree/SourceTree_1.8.1.dmg
 spotify:			http://download.spotify.com/SpotifyInstaller.zip
 sublime:			http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
-synergy:			http://synergy-foss.org/download/?file=synergy-1.4.16-r1969-MacOSX109-x86_64.dmg
+synergy:			http://fossfiles.com/synergy/synergy-1.4.16-r1969-MacOSX109-x86_64.dmg
 vlc:				http://mirror.switch.ch/ftp/mirror/videolan/vlc/2.1.4/macosx/vlc-2.1.4.dmg
 
 # licence
