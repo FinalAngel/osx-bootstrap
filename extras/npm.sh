@@ -5,7 +5,7 @@ clear
 
 # start bootstrap
 echo 'OSX Bootstrap NPM'
-echo '------------------'
+echo '-----------------'
 echo ''
 
 # define helpers
