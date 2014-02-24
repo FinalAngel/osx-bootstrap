@@ -1,10 +1,8 @@
 #!/bin/bash
 
 # sudo helper
-
 function require_sudo() {
-    whoami | grep "root" > /dev/null
-    if [ $? -eq 1 ] || [ "$1" = "" ]; then
+    if [ `id -u` -eq 0 ]; then
         echo ""
         echo "##### Enter Sudo Password: "
 
