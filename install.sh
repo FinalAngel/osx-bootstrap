@@ -47,8 +47,6 @@ source $source_dir/core/python.sh
 source $source_dir/core/mysql.sh
 # install postgres
 source $source_dir/core/postgres.sh
-# install compass
-source $source_dir/core/compass.sh
 # install zsh
 source $source_dir/core/zsh.sh
 # install defaults
