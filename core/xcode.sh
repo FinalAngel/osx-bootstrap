@@ -17,10 +17,12 @@ if [[ ! -f $source_dir/.osx-bootstrap ]]; then
 	    elif [ "$OSX_VERS" -eq 9 ]; then
 		    DMGURL=http://adcdownload.apple.com/Developer_Tools/command_line_tools_os_x_mavericks_for_xcode__late_october_2013/command_line_tools_os_x_mavericks_for_xcode__late_october_2013.dmg
 	    fi
-	  curl "$DMGURL" -o "$TOOLS"
+
+	    # download
+	    curl "$DMGURL" -o "$TOOLS"
 	fi
 
-	TMPMOUNT=`/usr/bin/mktemp -d /tmp/clitools.XXXX`
+	TMPMOUNT=`/usr/bin/mktemp -d /tmp/clitools.dmg`
 	hdiutil attach "$TOOLS" -mountpoint "$TMPMOUNT"
 	installer -pkg "$(find $TMPMOUNT -name '*.mpkg')" -target /
 	hdiutil detach "$TMPMOUNT"
