@@ -2,9 +2,6 @@
 
 if [[ ! -f $source_dir/.osx-bootstrap ]]; then
 
-    echo ''
-    echo '##### Installing Xcode'
-
 	# https://gist.github.com/trinitronx/6217746
 	OSX_VERS=$(sw_vers -productVersion | awk -F "." '{print $2}')
 	 
