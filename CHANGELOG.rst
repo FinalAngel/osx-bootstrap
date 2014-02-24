@@ -2,6 +2,13 @@
 OSX Bootstrap
 =============
 
+1.3.0
+-----
+- added more instructions for command line tools installation on mavericks
+- moved core/compass to extras
+- changed secure empty trash to false as it's annoying
+- fixed an issue with npm paths and added bower and grunt as defaults
+
 1.2.5
 -----
 - fixed sudo alive
