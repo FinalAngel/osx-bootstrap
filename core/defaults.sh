@@ -52,8 +52,8 @@ if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
     # FINDER
     # Show dotfiles in Finder
     defaults write com.apple.finder AppleShowAllFiles TRUE
-    # Setting Trash to empty securely by default
-    defaults write com.apple.finder EmptyTrashSecurely -bool true
+    # Setting Trash to empty securely not by default
+    defaults write com.apple.finder EmptyTrashSecurely -bool false
     # Disable the warning when changing a file extension
     defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
     # show litsview as default
