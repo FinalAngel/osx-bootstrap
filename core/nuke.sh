@@ -9,8 +9,7 @@ echo '------------------'
 echo ''
 
 # define helpers
-source_dir='~/.osx-bootstrap'
-source $source_dir/core/helpers.sh
+source helpers.sh
 
 # ensure you want to remove all components
 read -p "##### Are you sure you want to remove osx-bootstrap? [Yn]" -n 1 -r
