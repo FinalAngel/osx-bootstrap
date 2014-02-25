@@ -35,6 +35,7 @@ rm -rf ~/Library/Caches/Homebrew
 rm -rf /Library/Caches/Homebrew
 rm -rf /usr/local/Cellar
 rm -rf /usr/local/.git
+rm -rf /usr/local/bin/brew
 # templates
 rm -rf /usr/local/etc
 sudo rm -rf /etc/resolver
