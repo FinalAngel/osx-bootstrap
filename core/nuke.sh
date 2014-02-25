@@ -44,7 +44,6 @@ dscacheutil -flushcache
 # core/python
 echo '##### Uninstall core/python'
 rm -rf ~/.profile
-exec bash
 # pip uninstalls
 pip uninstall virtualenv
 pip uninstall virtualenvwrapper
