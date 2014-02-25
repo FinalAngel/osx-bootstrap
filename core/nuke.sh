@@ -25,11 +25,16 @@ require_sudo
 # core/brew.sh
 echo ''
 echo '##### Uninstall core/brew'
-brew update
-bash <(curl -s https://gist.github.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh)
+cd `brew --prefix`
+rm -rf Cellar
+brew prune
+rm `git ls-files`
+rm -r Library/Homebrew Library/Aliases Library/Formula Library/Contributions
+rm -rf .git
+rm -rf ~/Library/Caches/Homebrew
+rm -rf /Library/Caches/Homebrew
 rm -rf /usr/local/Cellar
 rm -rf /usr/local/.git
-rm -rf /Library/Caches/Homebrew
 # templates
 rm -rf /usr/local/etc
 sudo rm -rf /etc/resolver
