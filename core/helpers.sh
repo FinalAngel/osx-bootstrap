@@ -5,7 +5,6 @@ function require_sudo() {
     if [ `id -u` -eq 0 ]; then
         [[ ! $password ]] && read -s -p "##### Enter Sudo Password: " password
         echo $password | sudo -v -S
-        sudo bash
     fi
 
     # Keep-alive: update existing sudo time stamp if set, otherwise do nothing.
