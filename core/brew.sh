@@ -30,8 +30,6 @@ export formulas='
     cowsay
     redis
     geoip
-    libjpeg
-    libjpeg-turbo
     freetype
 '
 for formula in $formulas
