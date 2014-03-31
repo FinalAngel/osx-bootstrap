@@ -9,6 +9,11 @@ echo 'OSX Bootstrap 1.3.0'
 echo '-------------------'
 echo ''
 
+# Require sudo
+sudo -v
+# sudo keepalive
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # define variables
 declare source_dir=~/.osx-bootstrap
 declare source_file=$source_dir/.osx-bootstrap
