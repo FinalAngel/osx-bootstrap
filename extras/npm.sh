@@ -28,4 +28,5 @@ if [[ ! $npm ]]; then
 	# install additional packages
 	npm install -g bower
 	npm install -g grunt-cli
+	npm install -g gulp
 fi
