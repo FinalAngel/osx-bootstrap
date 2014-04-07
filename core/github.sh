@@ -22,7 +22,7 @@ if [[ ! -f ~/.ssh/id_rsa ]]; then
         git config --global github.user $github_user
         git config --global github.token your_token_here
         git config --global color.ui true
-        git config --global push.default matching
+        git config --global push.default current
         # sublime support
         # git config --global core.editor "subl -w"
 
