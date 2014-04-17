@@ -2,6 +2,10 @@
 OSX Bootstrap
 =============
 
+1.4.0
+-----
+- moved extras/npm to core
+
 1.3.0
 -----
 - added more instructions for command line tools installation on mavericks
