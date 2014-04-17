@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# clear terminal screen
-clear
-
-# start bootstrap
-echo 'OSX Bootstrap NPM'
-echo '-----------------'
-echo ''
-
 # define helpers
 source_dir=~/.osx-bootstrap
 source $source_dir/core/helpers.sh

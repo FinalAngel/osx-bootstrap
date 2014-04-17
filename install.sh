@@ -5,7 +5,7 @@ clear
 
 # start bootstrap
 echo ''
-echo 'OSX Bootstrap 1.3.0'
+echo 'OSX Bootstrap 1.4.0'
 echo '-------------------'
 echo ''
 
@@ -50,6 +50,8 @@ source $source_dir/core/python.sh
 source $source_dir/core/mysql.sh
 # install postgres
 source $source_dir/core/postgres.sh
+# install node/npm
+source $source_dir/core/npm.sh
 # install zsh
 source $source_dir/core/zsh.sh
 # install defaults
