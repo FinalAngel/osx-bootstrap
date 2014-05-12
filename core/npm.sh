@@ -11,7 +11,7 @@ if [[ ! $npm ]]; then
 	brew install node
 
 	# npm installation
-	curl https://npmjs.org/install.sh | sh
+	curl -L https://npmjs.org/install.sh | sh
 
 	# att path
 	export NODE_PATH="/usr/local/lib/node"
