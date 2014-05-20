@@ -13,4 +13,5 @@ if [[ $? != 0 ]]; then
     echo ''
     echo '##### Installing Gem Compass...'
 	sudo gem install compass
+	sudo gem install bootstrap-sass
 fi
