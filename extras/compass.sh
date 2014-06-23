@@ -12,6 +12,7 @@ require_sudo
 if [[ $? != 0 ]]; then
     echo ''
     echo '##### Installing Gem Compass...'
-	sudo gem install compass
+	sudo gem install sass -v '>=3.3.0alpha' --pre
+	sudo gem install compass -v '>=1.0.0alpha' --pre
 	sudo gem install bootstrap-sass
 fi
