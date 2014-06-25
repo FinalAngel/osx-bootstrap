@@ -35,6 +35,7 @@ export formulas='
     libjpeg
     webp
     openjpeg
+    little-cms2
 '
 for formula in $formulas
 do
