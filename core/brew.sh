@@ -31,6 +31,10 @@ export formulas='
     redis
     geoip
     freetype
+    libtiff
+    libjpeg
+    webp
+    openjpeg
 '
 for formula in $formulas
 do
