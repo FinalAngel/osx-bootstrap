@@ -5,6 +5,7 @@ OSX Bootstrap
 1.4.0
 -----
 - moved extras/npm to core
+- added additional brew requirements for Pillow/PIL
 
 1.3.0
 -----
