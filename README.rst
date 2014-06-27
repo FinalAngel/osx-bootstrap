@@ -17,7 +17,7 @@ Install Bootstrap
 -----------------
 
 #. | Open a terminal and run:
-   | ``curl -L https://raw.github.com/divio/osx-bootstrap/master/install.sh | bash``
+   | ``bash <(curl -F https://raw.github.com/divio/osx-bootstrap/master/install.sh)``
 
 You will need to enter your **sudo password** and **github information** during the installation process.
 
@@ -56,7 +56,7 @@ Upgrading
 Uninstalling Bootstrap
 ----------------------
 
-``curl -L https://raw.github.com/divio/osx-bootstrap/master/core/nuke.sh | bash``
+``bash <(curl -F https://raw.github.com/divio/osx-bootstrap/master/core/nuke.sh)``
 
 
 About Bootstrap
