@@ -2,10 +2,6 @@
 
 # define helpers
 source_dir=~/.osx-bootstrap
-source $source_dir/core/helpers.sh
-
-# require sudo password
-require_sudo
 
 # install postgres
 postgres=`brew list | grep postgres`

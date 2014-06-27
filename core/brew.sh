@@ -2,7 +2,6 @@
 
 # define helpers
 source_dir=~/.osx-bootstrap
-source $source_dir/core/helpers.sh
 
 # install homebrew
 `which -s brew`
@@ -48,9 +47,6 @@ do
             # setup dnsmask
             mkdir /usr/local/etc/
             cp -rf $source_dir/templates/dnsmasq.conf /usr/local/etc
-
-            # sudo is required for dnsmasq
-            require_sudo
 
             # setup dnsmask daemon
             sudo ln -sfv /usr/local/opt/dnsmasq/*.plist /Library/LaunchDaemons

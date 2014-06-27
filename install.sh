@@ -5,7 +5,7 @@ clear
 
 # start bootstrap
 echo ''
-echo 'OSX Bootstrap 1.4.0'
+echo 'OSX Bootstrap 1.5.0'
 echo '-------------------'
 echo ''
 
@@ -15,6 +15,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # define variables
+declare update=true
 declare source_dir=~/.osx-bootstrap
 declare source_file=$source_dir/.osx-bootstrap
 declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
@@ -61,12 +62,19 @@ source $source_dir/core/github.sh
 # place your extras here
 
 # create bootstrap file
-[[ ! -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
+[[ ! -f $source_file or update ]] && mv $source_file_tmp $source_file && chmod +x $source_file
 
 # done
 echo ''
 cowsay 'Bootstrapp Ready!'
 echo ''
 
-# call helper function from libs/system.sh
-require_reboot
+# reboot after installation is done
+`sudo fdesetup isactive`
+if [[ $? != 0 ]]; then
+    read -p "##### Do you want to reboot? [Yn]" -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo ''
+        sudo reboot
+    fi
+fi

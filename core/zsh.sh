@@ -2,7 +2,6 @@
 
 # define helpers
 source_dir=~/.osx-bootstrap
-source $source_dir/core/helpers.sh
 
 # install oh-my-zsh
 if [[ ! -f ~/.zshrc ]]; then

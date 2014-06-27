@@ -10,7 +10,6 @@ echo ''
 
 # define helpers
 source_dir=~/.osx-bootstrap
-source $source_dir/core/helpers.sh
 
 # install php
 php=`brew list | grep php`

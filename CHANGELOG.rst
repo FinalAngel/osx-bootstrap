@@ -2,6 +2,12 @@
 OSX Bootstrap
 =============
 
+1.5.0
+-----
+- removed core/helpers.sh in favor of install.sh
+- added upgrade variable to termine if we should autoupdate
+- upgrade.sh will be deprecated as of 1.6.0
+
 1.4.0
 -----
 - moved extras/npm to core
