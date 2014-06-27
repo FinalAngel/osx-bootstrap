@@ -32,7 +32,6 @@ export formulas='
     geoip
     freetype
     libtiff
-    libjpeg
     webp
     openjpeg
     little-cms2
