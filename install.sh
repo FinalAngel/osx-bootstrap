@@ -35,9 +35,6 @@ else
 	git pull origin master
 fi
 
-# define helpers
-source $source_dir/core/helpers.sh
-     
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
 
