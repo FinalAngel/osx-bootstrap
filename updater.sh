@@ -34,7 +34,7 @@ then
             _upgrade_osx
         else
             echo "OSX Bootstrap would like to check for updates?"
-            echo "Type Y to update: \c"
+            echo "Type Y to update:"
             read line
             if [ "$line" = Y ] || [ "$line" = y ]; then
                 _upgrade_osx
