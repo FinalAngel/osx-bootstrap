@@ -67,6 +67,10 @@ source $source_dir/core/github.sh
 # create bootstrap file
 [[ ! -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
 
+# finish update
+source $source_dir/updater.sh
+_update_osx_update
+
 # done
 echo ''
 cowsay 'Bootstrapp Ready!'
