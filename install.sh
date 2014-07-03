@@ -9,15 +9,10 @@ declare source_dir=~/.osx-bootstrap
 declare source_file=$source_dir/.osx-bootstrap
 declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
 declare password
+declare version='1.6.0.a'
 
 # should we update
 [[ update ]] && cp -rf $source_dir/install.sh $source_file && chmod +x $source_file
-
-# start bootstrap
-echo ''
-echo 'OSX Bootstrap 1.6.1'
-echo '-------------------'
-echo ''
 
 # Require sudo
 sudo -v
@@ -37,6 +32,15 @@ else
 	cd $source_dir
 	git pull origin master
 fi
+
+# clear terminal screen
+clear
+
+# start bootstrap
+echo ''
+echo 'OSX Bootstrap ' $version
+echo '-------------------'
+echo ''
 
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
