@@ -16,6 +16,9 @@ alias venv="source env/bin/activate"
 alias denv="deactivate"
 alias bootstrap="~/.osx-bootstrap/.osx-bootstrap"
 
+##### Autorun
+bash ~/.osx-bootstrap/updater.sh
+
 ##### Homebrew Formula: bash_completion
 ##### Disabled cause of issues with oh-my-zsh
 #if [[ -f $(brew --prefix)/etc/bash_completion ]]; then

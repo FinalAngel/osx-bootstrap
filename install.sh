@@ -5,7 +5,7 @@ clear
 
 # start bootstrap
 echo ''
-echo 'OSX Bootstrap 1.5.0'
+echo 'OSX Bootstrap 1.6.0'
 echo '-------------------'
 echo ''
 
@@ -37,6 +37,8 @@ fi
 
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
+# should we update
+[[ update ]] && cp -rf $source_dir/install.sh $source_file && chmod +x $source_file
 
 # include system with param $1
 source $source_dir/core/system.sh $1
@@ -60,7 +62,6 @@ source $source_dir/core/github.sh
 
 # create bootstrap file
 [[ ! -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
-[[ update ]] && cp -rf $source_dir/install.sh $source_file && chmod +x $source_file
 
 # done
 echo ''
