@@ -2,6 +2,12 @@
 OSX Bootstrap
 =============
 
+1.6.0
+-----
+- added autoupdater similar to zsh
+- fixes issues with upgrade functionality
+- upgrade.sh will be deprecated as of 1.7.0
+
 1.5.0
 -----
 - removed core/helpers.sh in favor of install.sh
