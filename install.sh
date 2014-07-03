@@ -43,10 +43,8 @@ echo '-------------------'
 
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
-
 # update timestamp
-source $source_dir/updater.sh
-_update_osx_update
+echo "LAST_EPOCH=$(_current_epoch)" > ~/.osx-bootstrap/.osx-update
 
 # include system with param $1
 source $source_dir/core/system.sh $1
