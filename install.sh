@@ -9,7 +9,7 @@ declare source_dir=~/.osx-bootstrap
 declare source_file=$source_dir/.osx-bootstrap
 declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
 declare password
-declare version='1.6.0.c'
+declare version='1.6.0.d'
 
 # Require sudo
 sudo -v
@@ -35,7 +35,7 @@ fi
 
 # start bootstrap
 echo ''
-echo 'OSX Bootstrap' && $version
+echo 'OSX Bootstrap ' && $version
 echo '-------------------'
 
 # create bootstrap tmp
