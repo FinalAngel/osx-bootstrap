@@ -3,9 +3,19 @@
 # clear terminal screen
 clear
 
+# define variables
+declare update=true
+declare source_dir=~/.osx-bootstrap
+declare source_file=$source_dir/.osx-bootstrap
+declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
+declare password
+
+# should we update
+[[ update ]] && cp -rf $source_dir/install.sh $source_file && chmod +x $source_file
+
 # start bootstrap
 echo ''
-echo 'OSX Bootstrap 1.6.0'
+echo 'OSX Bootstrap 1.6.1'
 echo '-------------------'
 echo ''
 
@@ -13,13 +23,6 @@ echo ''
 sudo -v
 # sudo keepalive
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-# define variables
-declare update=true
-declare source_dir=~/.osx-bootstrap
-declare source_file=$source_dir/.osx-bootstrap
-declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
-declare password
 
 # we need to download the repo for the absolute paths
 if [[ ! -d ~/.osx-bootstrap ]]; then
@@ -37,8 +40,6 @@ fi
 
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
-# should we update
-[[ update ]] && cp -rf $source_dir/install.sh $source_file && chmod +x $source_file
 
 # include system with param $1
 source $source_dir/core/system.sh $1
