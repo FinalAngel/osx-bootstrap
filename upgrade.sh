@@ -21,5 +21,11 @@ source_file=$source_dir/.osx-bootstrap
 # copy file
 cp -rf $source_dir/install.sh $source_file && chmod +x $source_file
 
+# FILE UPDATES
+# create profile
+cp -rf $source_dir/templates/.profile ~/
+# load profile
+source ~/.profile
+
 # continue to bootstrap
 bash $source_file
