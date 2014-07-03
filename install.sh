@@ -44,6 +44,10 @@ echo '-------------------'
 # create bootstrap tmp
 [[ ! -f $source_file ]] && cp -rf $source_dir/install.sh $source_file_tmp
 
+# update timestamp
+source $source_dir/updater.sh
+_update_osx_update
+
 # include system with param $1
 source $source_dir/core/system.sh $1
 # install brew
@@ -66,10 +70,6 @@ source $source_dir/core/github.sh
 
 # create bootstrap file
 [[ ! -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
-
-# finish update
-source $source_dir/updater.sh
-_update_osx_update
 
 # done
 echo ''
