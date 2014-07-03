@@ -9,7 +9,7 @@ function _update_osx_update() {
 }
 
 function _upgrade_osx() {
-    bash bootstrap
+    ~/.osx-bootstrap/.osx-bootstrap
 }
 
 epoch_target=$UPDATE_OSX_DAYS
