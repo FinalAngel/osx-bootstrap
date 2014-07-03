@@ -59,7 +59,8 @@ source $source_dir/core/github.sh
 # place your extras here
 
 # create bootstrap file
-[[ ! -f $source_file || update ]] && mv $source_file_tmp $source_file && chmod +x $source_file
+[[ ! -f $source_file ]] && mv $source_file_tmp $source_file && chmod +x $source_file
+[[ update ]] && cp -rf $source_dir/install.sh $source_file && chmod +x $source_file
 
 # done
 echo ''
