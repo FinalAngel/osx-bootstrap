@@ -35,7 +35,7 @@ fi
 
 # start bootstrap
 echo ''
-echo 'OSX Bootstrap ' && $version
+echo 'OSX Bootstrap' + $version
 echo '-------------------'
 
 # create bootstrap tmp
