@@ -29,7 +29,7 @@ then
     epoch_diff=$(($(_current_epoch) - $LAST_EPOCH))
     if [ $epoch_diff -gt $epoch_target ]
     then
-        if [ $DISABLE_UPDATE_PROMPT = 'true' ]
+        if [[ $DISABLE_UPDATE_PROMPT = 'true' ]]
         then
             _upgrade_osx
         else
