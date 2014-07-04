@@ -8,7 +8,7 @@ source_dir=~/.osx-bootstrap
 if [[ $? != 0 ]]; then
     echo ''
     echo '##### Installing Homebrew...'
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 else
     echo ''
     echo '##### Running Homebrew Updates...'
