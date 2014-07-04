@@ -36,7 +36,6 @@ fi
 clear
 
 # start bootstrap
-echo ''
 echo '-------------------'
 echo 'OSX Bootstrap' $version
 echo '-------------------'
