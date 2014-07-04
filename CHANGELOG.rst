@@ -7,6 +7,7 @@ OSX Bootstrap
 - added autoupdater similar to zsh
 - fixes issues with upgrade functionality
 - upgrade.sh will be deprecated as of 1.7.0
+- fixed an issue with homebrew installation
 
 1.5.0
 -----
