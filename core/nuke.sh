@@ -59,6 +59,7 @@ rm -rf ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 # core/zsh
 echo '##### Uninstall core/zsh'
 bash ~/oh-my-zsh/tools/uninstall.sh
+rm -rf ~/.zshrc
 
 # core/defaults
 echo '##### Uninstall core/defaults'
