@@ -9,7 +9,7 @@ if [[ ! $postgres ]]; then
     echo ''
     echo '##### Installing Formula Postgres...'
     
-    PYTHON=/usr/local/bin/python brew install postgres
+    PYTHON=/usr/local/bin/python brew install postgis
 
     # update system
     # http://blog.55minutes.com/2013/09/postgresql-93-brew-upgrade/
@@ -19,25 +19,22 @@ if [[ ! $postgres ]]; then
     sudo cp -rf $source_dir/templates/sysctl.conf /etc
 
     # setup postgres
-    ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
     initdb /usr/local/var/postgres -E utf8
-
-    # brew installs
-    brew install postgis
-
-    # brew fixes
-    brew unlink libxml2
-
-    # install required gem
-    sudo gem install pg
-    
-    # setup postgres
-    createuser postgres -s
+    pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
     # setup postgis
     createdb template_postgis
     createlang plpgsql template_postgis
     psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/postgis.sql
     psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/spatial_ref_sys.sql
+    
+    # always load postgres
+    ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+    # brew fixes
+    brew unlink libxml2
+
+    # install required gem
+    sudo gem install pg
 fi

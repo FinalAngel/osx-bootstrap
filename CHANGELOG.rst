@@ -2,6 +2,10 @@
 OSX Bootstrap
 =============
 
+1.6.1
+-----
+- fixed an issue with postgis installation
+
 1.6.0
 -----
 - added autoupdater similar to zsh
