@@ -21,6 +21,7 @@ if [[ ! $postgres ]]; then
     # setup postgres
     initdb /usr/local/var/postgres -E utf8
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+    createuser postgres -s
 
     # setup postgis
     createdb template_postgis
