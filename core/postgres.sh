@@ -26,8 +26,8 @@ if [[ ! $postgres ]]; then
     # setup postgis
     createdb template_postgis
     createlang plpgsql template_postgis
-    psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/postgis.sql
-    psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/spatial_ref_sys.sql
+    psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/postgis.sql -U postgres
+    psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/spatial_ref_sys.sql -U postgres
     
     # always load postgres
     ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
