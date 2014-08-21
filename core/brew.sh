@@ -34,6 +34,7 @@ export formulas='
     webp
     openjpeg
     little-cms2
+    watch
 '
 for formula in $formulas
 do
