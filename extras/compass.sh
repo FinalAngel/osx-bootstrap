@@ -8,7 +8,7 @@ source_dir=~/.osx-bootstrap
 if [[ $? != 0 ]]; then
     echo ''
     echo '##### Installing Gem Compass...'
-	sudo gem install sass -v '>=3.3.0alpha' --pre
-	sudo gem install compass -v '>=1.0.0alpha' --pre
+	sudo gem install sass
+	sudo gem install compass
 	sudo gem install bootstrap-sass
 fi
