@@ -5,6 +5,7 @@ OSX Bootstrap
 1.6.1
 -----
 - fixed an issue with postgis installation
+- removed fixed version within extra/compass
 
 1.6.0
 -----
