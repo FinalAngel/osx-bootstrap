@@ -18,6 +18,9 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit
 fi
 
+# ensure sudo is there
+sudo -v
+
 # core/brew.sh
 echo ''
 echo '##### Uninstall core/brew'
