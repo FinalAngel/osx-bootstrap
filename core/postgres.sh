@@ -9,7 +9,10 @@ if [[ ! $postgres ]]; then
     echo ''
     echo '##### Installing Formula Postgres...'
     
-    PYTHON=/usr/local/bin/python brew install postgis
+    PYTHON=/usr/local/bin/python brew install postgres
+
+    # install postgis
+    brew install postgis
 
     # update system
     # http://blog.55minutes.com/2013/09/postgresql-93-brew-upgrade/
