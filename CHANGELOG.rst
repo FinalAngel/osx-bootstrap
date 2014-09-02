@@ -6,6 +6,7 @@ OSX Bootstrap
 -----
 - fixed an issue with postgis installation
 - fixed an issue where postgres has issues installing required templates
+- fixed an issue with pg gem installation
 - removed fixed version within extra/compass
 
 1.6.0
