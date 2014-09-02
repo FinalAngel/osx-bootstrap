@@ -21,8 +21,13 @@ if [[ ! $postgres ]]; then
     # make sure settings stay after restart
     sudo cp -rf $source_dir/templates/sysctl.conf /etc
 
+    # always load postgres
+    ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+    
     # setup postgres
     initdb /usr/local/var/postgres -E utf8
+    launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
     createuser postgres -s
 
@@ -33,7 +38,6 @@ if [[ ! $postgres ]]; then
     psql -d template_postgis -f /usr/local/Cellar/postgis/*/share/postgis/spatial_ref_sys.sql -U postgres
     
     # always load postgres
-    ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
     launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
     # brew fixes
