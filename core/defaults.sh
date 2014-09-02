@@ -89,6 +89,8 @@ if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
     # Add a spacer to the left and right side of the Dock (where the applications are)
     defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
     defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
+    # http://www.macprime.ch/tipps/article/optimierte-listen-ansicht-im-os-x-dock-aktivieren
+    defaults write com.apple.dock use-new-list-stack -bool TRUE
     # Wipe all (default) app icons from the Dock
     # defaults write com.apple.dock persistent-apps -array
     # Reset Launchpad
