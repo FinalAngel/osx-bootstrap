@@ -40,5 +40,5 @@ if [[ ! $postgres ]]; then
     brew unlink libxml2
 
     # install required gem
-    sudo gem install pg
+    sudo env ARCHFLAGS="-arch x86_64" gem install pg
 fi
