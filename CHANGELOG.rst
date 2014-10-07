@@ -8,6 +8,7 @@ OSX Bootstrap
 - fixed an issue where postgres has issues installing required templates
 - fixed an issue with pg gem installation
 - removed fixed version within extra/compass
+- added brew gettext
 
 1.6.0
 -----
