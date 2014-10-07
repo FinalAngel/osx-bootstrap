@@ -35,6 +35,7 @@ export formulas='
     openjpeg
     little-cms2
     watch
+    gettext
 '
 for formula in $formulas
 do
