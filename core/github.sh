@@ -35,7 +35,7 @@ if [[ ! -f ~/.ssh/id_rsa ]]; then
         echo ''
         echo '##### The following rsa key has been copied to your clipboard: '
         cat ~/.ssh/id_rsa.pub
-        echo '##### Follow step 3 to complete: https://help.github.com/articles/generating-ssh-keys'
+        echo '##### Follow step 4 to complete: https://help.github.com/articles/generating-ssh-keys'
         ssh -T git@github.com
     fi
 fi
