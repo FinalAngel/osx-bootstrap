@@ -2,6 +2,11 @@
 OSX Bootstrap
 =============
 
+1.6.2
+-----
+- added scss-lint to compass installation
+- update github instructions
+
 1.6.1
 -----
 - fixed an issue with postgis installation
