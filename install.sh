@@ -4,7 +4,7 @@
 clear
 
 # define variables
-declare version='1.6.1'
+declare version='1.6.2'
 declare update=true
 declare source_dir=~/.osx-bootstrap
 declare source_file=$source_dir/.osx-bootstrap
