@@ -72,5 +72,9 @@ do
             ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
             launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
         fi
+        
+        if [[ $formula = 'gettext' ]]; then
+            ln -s /usr/local/Cellar/gettext/*/bin/msgfmt /usr/local/bin/msgfmt
+        fi
     fi
 done
