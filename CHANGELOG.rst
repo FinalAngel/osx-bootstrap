@@ -6,6 +6,7 @@ OSX Bootstrap
 -----
 - added scss-lint to compass installation
 - update github instructions
+- added a fix for gettext
 
 1.6.1
 -----
