@@ -11,12 +11,16 @@ echo ''
 
 # Require sudo
 sudo -v
-# sudo keepalive
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # define variables
 source_dir=~/.osx-bootstrap
 source_file=$source_dir/.osx-bootstrap
+
+# define helpers
+source core/sudo.sh
+
+# Request password
+request_password
 
 # copy file
 cp -rf $source_dir/install.sh $source_file && chmod +x $source_file

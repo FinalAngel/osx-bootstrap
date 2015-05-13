@@ -3,6 +3,10 @@
 # clear terminal screen
 clear
 
+
+# Require sudo
+sudo -v
+
 # define variables
 declare version='1.6.2'
 declare update=true
@@ -10,10 +14,11 @@ declare source_dir=~/.osx-bootstrap
 declare source_file=$source_dir/.osx-bootstrap
 declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
 
-# Require sudo
-sudo -v
-# sudo keepalive
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+# define helpers
+source core/sudo.sh
+
+# Request password
+request_password
 
 # we need to download the repo for the absolute paths
 if [[ ! -d ~/.osx-bootstrap ]]; then
