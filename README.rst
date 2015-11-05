@@ -8,9 +8,9 @@ This is a bash script automating configuration and installation of **OSX** works
 Requirements
 ------------
 
-#. Install a **fresh** version of OSX (10.8 or 10.9)
-#. **10.9** Open a Terminal and run ``gcc`` and install the **Command Line Tools**
-#. **10.8**: Install Xcode and open ``Xcode > Preferences > Downloads`` and install the **Command Line Tools**
+#. Install a **fresh** version of OSX (> 10.8)
+#. >= **10.9**: Open a Terminal and run ``gcc`` and install the **Command Line Tools**
+#. <= **10.8**: Install Xcode and open ``Xcode > Preferences > Downloads`` and install the **Command Line Tools**
 
 
 Install Bootstrap
@@ -49,6 +49,7 @@ Extras are not maintained within the bootstrap update process. Edit the ``.osx-b
 Upgrading
 ---------
 
+* run ``xcode-select --install`` after a system upgrade.
 * run ``bootstrap`` to start the osx-bootstrap auto update.
 * run ``.osx-bootstrap/upgrade.sh`` to force a full update of osx-bootstrap.
 
