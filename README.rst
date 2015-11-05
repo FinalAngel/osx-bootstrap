@@ -8,7 +8,7 @@ This is a bash script automating configuration and installation of **OSX** works
 Requirements
 ------------
 
-#. Install a **fresh** version of OSX (> 10.8)
+#. Install a **fresh** version of OSX (>=10.8)
 #. >= **10.9**: Open a Terminal and run ``gcc`` and install the **Command Line Tools**
 #. <= **10.8**: Install Xcode and open ``Xcode > Preferences > Downloads`` and install the **Command Line Tools**
 
