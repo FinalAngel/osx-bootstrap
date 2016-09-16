@@ -1,0 +1,8 @@
+{
+  "name": "osxbootstrap",
+  "version": "1.6.2",
+  "description": "Bootstrap a fresh OSX workstation",
+  "global": "true",
+  "scripts": [ "install.sh" ],
+  "install": "sh install.sh"
+}
