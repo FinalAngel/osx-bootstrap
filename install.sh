@@ -10,11 +10,20 @@ declare source_dir=~/.osx-bootstrap
 declare source_file=$source_dir/.osx-bootstrap
 declare source_file_tmp=$source_dir/.osx-bootstrap-tmp
 
-# Require sudo
-sudo -v
 # sudo keepalive
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+startsudo() {
+    sudo -v
+    ( while true; do sudo -v; sleep 60; done; ) &
+    SUDO_PID="$!"
+    trap stopsudo SIGINT SIGTERM
+}
+stopsudo() {
+    kill "$SUDO_PID"
+    trap - SIGINT SIGTERM
+    sudo -k
+}
 
+startsudo
 # we need to download the repo for the absolute paths
 if [[ ! -d ~/.osx-bootstrap ]]; then
     echo '##### Downloading Bootstrap...'
@@ -48,7 +57,7 @@ echo 'LAST_EPOCH=$(_current_epoch)' > ~/.osx-bootstrap/.osx-update
 # include system with param $1
 source $source_dir/core/system.sh $1
 # install brew
-source $source_dir/core/brew.sh
+(stopsudo && source $source_dir/core/brew.sh)
 # install python
 source $source_dir/core/python.sh
 # install mysql
@@ -67,6 +76,8 @@ source $source_dir/core/github.sh
 
 # create bootstrap file
 [[ ! -f $source_file || -f $source_file_tmp ]] && mv $source_file_tmp $source_file && chmod +x $source_file
+
+stopsudo
 
 # done
 echo ''
