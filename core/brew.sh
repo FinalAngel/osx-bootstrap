@@ -39,7 +39,7 @@ formulas=(
     mysql
 )
 
-for i in "${array[@]}"
+for i in "${formulas[@]}"
 do
     brew install $i
 done
